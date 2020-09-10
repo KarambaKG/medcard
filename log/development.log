@@ -156,3 +156,45 @@ Processing by CardpagesController#index as HTML
 Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.2ms)
 
 
+Started GET "/cardpages" for ::1 at 2020-09-10 14:37:38 +0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/maksim/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by CardpagesController#index as HTML
+  Rendering cardpages/index.html.erb within layouts/application
+  [1m[36mCardpage Load (0.5ms)[0m  [1m[34mSELECT "cardpages".* FROM "cardpages"[0m
+  ↳ app/views/cardpages/index.html.erb:16
+  Rendered cardpages/index.html.erb within layouts/application (13.5ms)
+DEPRECATION WARNING: autoprefixer-rails was deprected. Migration guide:
+https://github.com/ai/autoprefixer-rails/wiki/Deprecated (called from _app_views_layouts_application_html_erb___1263505161626323945_16300 at /home/maksim/projects/medcard/app/views/layouts/application.html.erb:8)
+Completed 200 OK in 11081ms (Views: 11068.6ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/cardpages/1" for ::1 at 2020-09-10 14:37:58 +0600
+Processing by CardpagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCardpage Load (0.2ms)[0m  [1m[34mSELECT  "cardpages".* FROM "cardpages" WHERE "cardpages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cardpages_controller.rb:67
+  Rendering cardpages/show.html.erb within layouts/application
+  Rendered cardpages/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 88ms (Views: 83.6ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cardpages/1" for ::1 at 2020-09-10 14:38:01 +0600
+Processing by CardpagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCardpage Load (0.1ms)[0m  [1m[34mSELECT  "cardpages".* FROM "cardpages" WHERE "cardpages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cardpages_controller.rb:67
+  Rendering cardpages/show.html.erb within layouts/application
+  Rendered cardpages/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 74ms (Views: 72.4ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/cardpages" for ::1 at 2020-09-10 14:38:03 +0600
+Processing by CardpagesController#index as HTML
+  Rendering cardpages/index.html.erb within layouts/application
+  [1m[36mCardpage Load (0.2ms)[0m  [1m[34mSELECT "cardpages".* FROM "cardpages"[0m
+  ↳ app/views/cardpages/index.html.erb:16
+  Rendered cardpages/index.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 71ms (Views: 69.1ms | ActiveRecord: 0.2ms)
+
+
