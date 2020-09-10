@@ -5,3 +5,154 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 22ms (Views: 13.6ms | ActiveRecord: 0.0ms)
 
 
+Started GET "/" for ::1 at 2020-09-10 13:45:23 +0600
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+):
+  
+activerecord (5.2.4.4) lib/active_record/migration.rb:579:in `check_pending!'
+activerecord (5.2.4.4) lib/active_record/migration.rb:556:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+activesupport (5.2.4.4) lib/active_support/callbacks.rb:98:in `run_callbacks'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/debug_exceptions.rb:61:in `call'
+web-console (3.7.0) lib/web_console/middleware.rb:135:in `call_app'
+web-console (3.7.0) lib/web_console/middleware.rb:30:in `block in call'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `catch'
+web-console (3.7.0) lib/web_console/middleware.rb:20:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/show_exceptions.rb:33:in `call'
+railties (5.2.4.4) lib/rails/rack/logger.rb:38:in `call_app'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `block in call'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `block in tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:28:in `tagged'
+activesupport (5.2.4.4) lib/active_support/tagged_logging.rb:71:in `tagged'
+railties (5.2.4.4) lib/rails/rack/logger.rb:26:in `call'
+sprockets-rails (3.2.1) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/remote_ip.rb:81:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/request_id.rb:27:in `call'
+rack (2.2.3) lib/rack/method_override.rb:24:in `call'
+rack (2.2.3) lib/rack/runtime.rb:22:in `call'
+activesupport (5.2.4.4) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (5.2.4.4) lib/action_dispatch/middleware/static.rb:127:in `call'
+rack (2.2.3) lib/rack/sendfile.rb:110:in `call'
+railties (5.2.4.4) lib/rails/engine.rb:524:in `call'
+puma (3.12.6) lib/puma/configuration.rb:227:in `call'
+puma (3.12.6) lib/puma/server.rb:706:in `handle_request'
+puma (3.12.6) lib/puma/server.rb:476:in `process_client'
+puma (3.12.6) lib/puma/server.rb:334:in `block in run'
+puma (3.12.6) lib/puma/thread_pool.rb:135:in `block in spawn_thread'
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ /home/maksim/.rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (8.7ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ /home/maksim/.rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (9.9ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ /home/maksim/.rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/maksim/.rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Migrating to CreateCardpages (20200910073605)
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/maksim/.rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.4ms)[0m  [1m[35mCREATE TABLE "cardpages" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "title" varchar, "h1" varchar, "body" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/migrate/20200910073605_create_cardpages.rb:3
+  [1m[36mActiveRecord::SchemaMigration Create (0.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES (?)[0m  [["version", "20200910073605"]]
+  ↳ /home/maksim/.rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (10.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/maksim/.rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Load (0.3ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /home/maksim/.rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /home/maksim/.rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[36mActiveRecord::InternalMetadata Create (0.2ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2020-09-10 07:46:14.808490"], ["updated_at", "2020-09-10 07:46:14.808490"]]
+  ↳ /home/maksim/.rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (6.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /home/maksim/.rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/maksim/.rvm/rubies/ruby-2.7.0/lib/ruby/gems/2.7.0/gems/rake-13.0.1/lib/rake/task.rb:281
+Started GET "/" for ::1 at 2020-09-10 13:46:26 +0600
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/maksim/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by Rails::WelcomeController#index as HTML
+  Rendering /home/maksim/.rvm/gems/ruby-2.7.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/maksim/.rvm/gems/ruby-2.7.0/gems/railties-5.2.4.4/lib/rails/templates/rails/welcome/index.html.erb (3.9ms)
+Completed 200 OK in 31ms (Views: 12.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/cardpages" for ::1 at 2020-09-10 14:20:08 +0600
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /home/maksim/.rvm/gems/ruby-2.7.0/gems/activerecord-5.2.4.4/lib/active_record/log_subscriber.rb:98
+Processing by CardpagesController#index as HTML
+  Rendering cardpages/index.html.erb within layouts/application
+  [1m[36mCardpage Load (0.2ms)[0m  [1m[34mSELECT "cardpages".* FROM "cardpages"[0m
+  ↳ app/views/cardpages/index.html.erb:16
+  Rendered cardpages/index.html.erb within layouts/application (9.3ms)
+Completed 200 OK in 2009ms (Views: 1993.0ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/cardpages/new" for ::1 at 2020-09-10 14:20:13 +0600
+Processing by CardpagesController#new as HTML
+  Rendering cardpages/new.html.erb within layouts/application
+  Rendered cardpages/_form.html.erb (36.0ms)
+  Rendered cardpages/new.html.erb within layouts/application (37.6ms)
+Completed 200 OK in 67ms (Views: 57.9ms | ActiveRecord: 0.5ms)
+
+
+Started POST "/cardpages" for ::1 at 2020-09-10 14:20:43 +0600
+Processing by CardpagesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"huDKSIysdcke9fQoI85CZgkuke32zvsqjZox55MefXWE32LDMkbnqsgEm1AFr4YQw1qbFuHADyI+JaVfN8ttOw==", "cardpage"=>{"title"=>"Title cardpage", "h1"=>"h1 i dont know why", "body"=>"It is my body"}, "commit"=>"Create Cardpage"}
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/cardpages_controller.rb:30
+  [1m[36mCardpage Create (0.3ms)[0m  [1m[32mINSERT INTO "cardpages" ("title", "h1", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["title", "Title cardpage"], ["h1", "h1 i dont know why"], ["body", "It is my body"], ["created_at", "2020-09-10 08:20:43.014147"], ["updated_at", "2020-09-10 08:20:43.014147"]]
+  ↳ app/controllers/cardpages_controller.rb:30
+  [1m[35m (13.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/cardpages_controller.rb:30
+Redirected to http://localhost:3000/cardpages/1
+Completed 302 Found in 25ms (ActiveRecord: 13.6ms)
+
+
+Started GET "/cardpages/1" for ::1 at 2020-09-10 14:20:43 +0600
+Processing by CardpagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCardpage Load (0.4ms)[0m  [1m[34mSELECT  "cardpages".* FROM "cardpages" WHERE "cardpages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cardpages_controller.rb:67
+  Rendering cardpages/show.html.erb within layouts/application
+  Rendered cardpages/show.html.erb within layouts/application (0.8ms)
+Completed 200 OK in 31ms (Views: 23.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/cardpages/1/edit" for ::1 at 2020-09-10 14:20:45 +0600
+Processing by CardpagesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCardpage Load (0.2ms)[0m  [1m[34mSELECT  "cardpages".* FROM "cardpages" WHERE "cardpages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cardpages_controller.rb:67
+  Rendering cardpages/edit.html.erb within layouts/application
+  Rendered cardpages/_form.html.erb (3.5ms)
+  Rendered cardpages/edit.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 28ms (Views: 24.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cardpages/1" for ::1 at 2020-09-10 14:20:47 +0600
+Processing by CardpagesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mCardpage Load (0.2ms)[0m  [1m[34mSELECT  "cardpages".* FROM "cardpages" WHERE "cardpages"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/cardpages_controller.rb:67
+  Rendering cardpages/show.html.erb within layouts/application
+  Rendered cardpages/show.html.erb within layouts/application (1.3ms)
+Completed 200 OK in 26ms (Views: 24.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/cardpages" for ::1 at 2020-09-10 14:20:49 +0600
+Processing by CardpagesController#index as HTML
+  Rendering cardpages/index.html.erb within layouts/application
+  [1m[36mCardpage Load (0.2ms)[0m  [1m[34mSELECT "cardpages".* FROM "cardpages"[0m
+  ↳ app/views/cardpages/index.html.erb:16
+  Rendered cardpages/index.html.erb within layouts/application (2.0ms)
+Completed 200 OK in 25ms (Views: 23.5ms | ActiveRecord: 0.2ms)
+
+

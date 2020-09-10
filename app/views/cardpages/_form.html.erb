@@ -1,0 +1,32 @@
+<%= form_with(model: cardpage, local: true) do |form| %>
+  <% if cardpage.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cardpage.errors.count, "error") %> prohibited this cardpage from being saved:</h2>
+
+      <ul>
+      <% cardpage.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :title %>
+    <%= form.text_field :title %>
+  </div>
+
+  <div class="field">
+    <%= form.label :h1 %>
+    <%= form.text_field :h1 %>
+  </div>
+
+  <div class="field">
+    <%= form.label :body %>
+    <%= form.text_area :body %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
